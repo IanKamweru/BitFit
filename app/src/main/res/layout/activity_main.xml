@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sleepTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/how_much_sleep_did_you_get_last_night"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sleepSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:progressTint="#3CD505"
+        android:min="0"
+        android:max="120"
+        android:progress="60"
+        android:stepSize="5"
+        android:tickMark="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sleepTextView"
+        android:layout_margin="16dp" />
+
+    <include layout="@layout/tooltip_layout"
+        android:id="@+id/sleepSeekBarTooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/sleepSeekBar" />
+
+    <TextView
+        android:id="@+id/feelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/how_did_you_feel_this_am"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sleepSeekBar"
+        android:layout_margin="16dp" />
+
+    <RatingBar
+        android:id="@+id/feelRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:progressTint="#3CD505"
+        android:numStars="5"
+        android:stepSize="0.5"
+        app:layout_constraintTop_toBottomOf="@id/feelTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/notesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/any_other_notes"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feelRatingBar" />
+
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/enter_any_other_notes_here"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feelRatingBar" />
+
+    <!-- Save button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintTop_toBottomOf="@id/notesEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <LinearLayout
+        android:id="@+id/averages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#349C0E"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton">
+
+        <TextView
+            android:id="@+id/average_sleep_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/average_sleep_time"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/average_feeling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/average_feeling"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/average_feeling_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:progressTint="#E3DFDF"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            android:isIndicator="true" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sleepEntriesRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/averages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

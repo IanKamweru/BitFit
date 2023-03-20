@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BitFit</string>
+    <string name="any_other_notes">Any other notes?</string>
+    <string name="how_did_you_feel_this_am">How did you feel this AM?</string>
+    <string name="enter_any_other_notes_here">Enter any other notes here</string>
+    <string name="save">Save</string>
+    <string name="how_much_sleep_did_you_get_last_night">How much sleep did you get last night?</string>
+    <string name="average_feeling">Average Feeling:</string>
+    <string name="average_sleep_time">Average Sleep Time: 7 hours</string>
+</resources>
