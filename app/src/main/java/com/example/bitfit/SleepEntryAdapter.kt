@@ -44,7 +44,7 @@ class SleepEntryAdapter(private val context: Context, private val sleepEntries: 
         holder.bind(sleepEntry)
 
         // Set long click listener to delete item
-        holder.itemView.setOnLongClickListener {
+       holder.itemView.setOnLongClickListener {
             (context as LifecycleOwner).lifecycleScope.launch(IO) {
                 // delete from database
                 val dao = (holder.itemView.context.applicationContext as SleepApplication).db.sleepDao()
