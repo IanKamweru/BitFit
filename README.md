@@ -1,38 +1,33 @@
-# Android Project 5 - *BitFit*
+# Android Project 6 - *BitFit*
 
 Submitted by: **Ian Kamweru**
 
 **BitFit** is a health metrics app that allows users to track their sleep activity.
 
-Time spent: **10** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): `[Sleep]`
-- [x] **There is a "create entry" UI that prompts users to make their daily entry**
-- [x] **New entries are saved in a database and then updated in the RecyclerView**
-- [x] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
+- [x] **Use at least 2 Fragments**
+- [x] **Create a new dashboard fragment where users can see a summary of their entered data**
+- [x] **Use one of the Navigation UI Views (BottomNavigation, Drawer Layout, Top Bar) to move between the fragments**
  
 The following **optional** features are implemented:
 
-- [x] **Create a UI for tracking averages and trends in metrics**
-- [x] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [x] **Add a more advanced UI (e.g: Graphing) for tracking trends in metrics**
+- [x] **Implement daily notifications to prompt users to fill in their data**
 
 The following **additional** features are implemented:
 
 - [x] **User can delete an entry by long pressing**
-- [x] **Daily reminder to fill data**
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<p align="center"><img src='walkthrough(2).gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/></p>
+<p align="center"><img src='walkthrough(3).gif' title='Video Walkthrough' width='350' alt='Video Walkthrough'/></p>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with **LiceCap**.  
